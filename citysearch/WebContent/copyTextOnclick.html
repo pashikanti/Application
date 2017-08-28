@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<script>
+function copyToClp(){
+	var ta = document.getElementById('clip');
+	ta.focus();
+	ta.select();
+    alert(document.execCommand('copy'));
+}
+</script>
+<body>
+<table >
+<tr>
+<th>Testing</th>
+</tr>
+<tr>
+<td><input type="text" id="clip" onclick="copyToClp()" value="click on this text.."></td>
+</tr>
+</table>
+<!-- <input type="text" id="clip" onclick="copyToClp()" value="rrr"> -->
+<!-- <textarea id="clip" onclick="copyToClp()">Test</textarea> --><!-- this executes copyToClp() function on user's click -->
+</body>
+</html>

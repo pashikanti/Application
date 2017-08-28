@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>All VM's</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+<style>
+table {
+  
+overflow:scroll;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+td:hover{
+background:yellow;
+}
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr{
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+
+}
+input[type=text] {
+    width: 300px;
+
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image:url('search.ico');
+    background-position: 1px 1px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 70%;
+}
+</style>
+<body>
+<center><h2>All VM's</h2></center>
+
+<table>
+<tr>
+
+
+  <input type="text" name="search" id="myInput" onkeyup="myFunction()" placeholder="Search for All VM's.." title="Type in a name">
+</tr>
+
+<table id="myTable">
+   <tr class="header">
+  
+ 
+<th>Name </th>  <th>Parent VCenter</th><th>VCenter FQDN</th><th>Data Center</th><th>Parent Host</th> <th> Parent Cluster</th>   <th>Guest OS</th> <th>Application</th>       
+</tr>                    
+                     
+                    
+                     
+                    
+</tr><tr> <td> 2008 </td><td> aaaa</td><td>jjj </td><td>lll</td><td>iii</td><td> Microsoft Windows Server 2012 (64-bit) </td><td> #N/A </td></tr>  
+
+
+</table>
+
+<script>
+function myFunction1() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput1");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable1");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+  
+  $('tr').mouseover(function(){
+	  var valueOfTd = $(this).val();
+	    //var valueOfTd = $(this).find('td:first-child').text();
+	   alert($(this).html()); // Do here what you want with the value.
+	    //document.location.href = 'http://www.google.com/'+ valueOfTd;
+	    document.getElementById("myInput").value = valueOfTd;
+	});
+}
+
+</script>
+<style>
+table {
+  
+overflow:scroll;
+}
+table, td, th {
+    border: 1px solid black;
+}
+td:hover{
+background:yellow;
+}
+* {
+  box-sizing: border-box;
+}
+#myInput1 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+#myTable1 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+#myTable1 th, #myTable1 td {
+  text-align: left;
+  padding: 12px;
+}
+#myTable1 tr {
+  
+}
+#myTable1 tr.header {
+
+}
+input[type=text] {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image:url('search.ico');
+    background-position: 1px 1px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 70%;
+}
+</style>
+<body>
+<center><h2>All VCenter's</h2></center>
+<table>
+<tr>
+
+  <input type="text" name="search"id="myInput1"  onkeyup="myFunction1()" placeholder="Search for VCenter's.." title="Type in a name">
+<table id="myTable1">
+   <tr class="header">
+  
+ 
+<th>vCenter Server </th>  <th> Location</th> <th>Access Method</th> <th>Alternate</th><th>Access Status</th></tr>
+<tr><td>aaaa</td><td> Singapore (SGSG / SGKC/) </td><td> dd </td><td>ee</td><td> Yes </td></tr>
+<tr><td> bb</td><td> Singapore (SGSG / SGKC/) </td><td> cc </td><td> ff</td><td> Yes </td></tr>
+</table>
+</body>                    
+</html> 

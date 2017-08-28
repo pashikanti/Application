@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+<!-- <textarea id="clip" onclick="copyToClp()">Test</textarea>this executes copyToClp() function on user's click
+<textarea id="clip2"></textarea> -->
+<textarea name="WordTextst" rows=10 cols=100 id="WordTextst" onclick="document.execCommand('Paste');"></textarea>
+<script>
+
+var ta = document.getElementById('clip');
+ta.focus();
+ta.select();
+
+function copyToClp(){
+    alert(document.execCommand('copy'));
+  pasteit(document.execCommand('copy'));
+}
+function pasteContent() {
+	alert("paste");
+	  alert(document.execCommand('Paste'));
+	document.execCommand('Paste');
+	   //document.execCommand('Paste');
+	   //alert(document.execCommand('Paste'));
+	}
+</script>
+</body>
+</html>
+
