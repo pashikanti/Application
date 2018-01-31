@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+sendNotification();
+</script>
+
+</head>
+<body>
+
+<h2>Send Push Notification</h2>
+
+<form method="post">
+Title:<br>
+<input type="text" name="title" id="title"><br>
+Message:<br>
+<input type="text" name="message" id="message" size="50"><br><br>
+<input type="submit" value="Send" onclick="sendNotification();">
+<input type="reset" value="Reset">
+</form>
+
+</body>
+<script>
+var url_loc = "http://172.16.2.18:8080/IMAAPIS/SendFCMNotification";
+function sendNotification(){
+	
+	var titleVal = document.getElementById("title").value;
+	var messageVal = document.getElementById("message").value;
+	var urlParms = "title=" + titleVal + "&message=" + messageVal;
+	$.ajax({
+	    url: url_loc,
+	    data: urlParms,  
+		type: "POST",			
+	   // dataType: "html",
+	    crossDomain: true,
+	    beforeSend: function(data) {
+	    }, 
+	    success: function(data) {
+	        document.getElementById('postData').reset();
+			
+	        alert("Notification sent.");
+	    },
+	    failure: function() {alert("failure");
+	        alert("Unable to send your query. Please try later.").show();
+	    }
+	});
+}
+</script>
+</html>
